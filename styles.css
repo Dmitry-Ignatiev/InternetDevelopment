@@ -1,0 +1,42 @@
+/* Internal CSS for body background color */
+h1 {
+    background-color: red; /* Your favorite color */
+}
+
+h2 {
+    border-block-end-width: medium;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: medium;
+}
+
+body {
+    text-align: center;
+    background-color: beige;
+    border-color: orange;
+}
+
+ul {
+    text-align: center;
+    border-color: orangered;
+}
+
+li {
+    text-align: center;
+    margin-bottom: 10px;
+    border: 1px solid transparent;
+}
+
+.intro {
+    border: 2px solid orange;
+    padding: 5px;
+    display: inline-block;
+}
+
+li:hover {
+    border-color: orange;
+}
+
+#list2 li {
+    color: red;
+}
