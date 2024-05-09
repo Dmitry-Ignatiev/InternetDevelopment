@@ -1,159 +1,64 @@
 <!DOCTYPE html>
-
+<!--
+	 GitHub Page:
+	 /https://github.com/Dmitry-Ignatiev/InternetDevelopment/
+-->
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
+	<!-- Sets the character encoding to UTF-8 -->
 	<meta charset="utf-8" />
-	<title>Mitzi Shop fans club</title>
-	
-	<style>
-		/* Internal CSS for body background color */
-		h1 {
-			background-color: red; /* Your favorite color */
-		}
+	<!-- Sets the title of the web page -->
+	<title>Mitzi Shop Fans Club</title>
 
-		h2 {
-			border-block-end-width: medium;
-			text-align: center;
-			font-family: Arial,sans-serif;
-			font-size: medium;
-		}
-
-		body {
-			text-align: center;
-			background-color: beige;
-			border-color: orange;
-		}
-
-		ul {
-			text-align: center;
-			border-color: orangered;
-		}
-
-        li {
-            text-align: center; /* Align text to the left */
-            margin-bottom: 10px; /* Add space between each text box */
-            border: 1px solid transparent;
-			}
-
-		.intro {
-			border: 2px solid orange;
-			padding: 5px;
-			display: inline-block;
-		}
-		li:hover{
-			border-color:orange;
-		}
-        #list2 li {
-			color:red;
-		}
-	</style>
+	<!-- Links an external CSS file for styling the page -->
 	<link rel="stylesheet" href="styles.css">
-
 </head>
 <body>
-
+	<!-- Main heading for the page -->
 	<h1>Mitzi-Net Fans Base</h1>
+	<!-- Displays the favicon image with an alternative text -->
 	<img src="favicon.ico" alt="Happy cat" />
+	<!-- Introductory section for the fan club -->
 	<div class="intro">
 		<h2>
-			This is a club for the Mitzi shop fan base .
-			We all gathered here to share knowledge regarding our pets,prices,market,health,etc.
-			please respect the rights of other users on this club and the shops rights on the products.
+			This is a club for the Mitzi shop fan base.
+			We all gathered here to share knowledge regarding our pets, prices, market, health, etc.
+			Please respect the rights of other users in this club and the shops' rights on the products.
 		</h2>
 	</div>
 
-
+	<!-- List of input fields for user registration -->
 	<ul>
 		<li id="name">
-			name:<input type="text" id="first_name" />,last name:<input type="text" id="last_name" />
+			Name: <input type="text" id="first_name" />, Last name: <input type="text" id="last_name" />
 		</li>
 		<li id="phone_number">
-			Phone Number<input type="text" id="phoneNum" />
+			Phone Number: <input type="text" id="phoneNum" />
 		</li>
 		<li>
-			Email:<input type="text" id="email" />
+			Email: <input type="text" id="email" />
 		</li>
-		<li>password<input type="text" id="password"></li>
-		<li>repeat password<input type="text" id="repeat_pass"></li>
-		
-		
-
+		<li>
+			Password: <input type="text" id="password" />
+		</li>
+		<li>
+			Repeat Password: <input type="text" id="repeat_pass" />
+		</li>
 	</ul>
-	<ul id="list2" style="list-style-type:none">
+
+	<!-- List of error messages for validation feedback -->
+	<ul id="list2" style="list-style-type: none;">
 		<li id="errname"></li>
 		<li id="errphone"></li>
 		<li id="erremail"></li>
 		<li id="errpassword"></li>
 	</ul>
-<button onclick="button_clicked()">Register</button>
+
+	<!-- Button to submit the registration form -->
+	<button onclick="button_clicked()">Register</button>
+
+	<!-- Links an external JavaScript file for script execution -->
+	<script src="scripts.js"></script>
 
 </body>
-<script>
-    function button_clicked() {
-        // Reset all error messages at the beginning of the function
-        document.getElementById("errname").innerHTML = "";
-        document.getElementById("errphone").innerHTML = "";
-        document.getElementById("erremail").innerHTML = "";
-        document.getElementById("errpassword").innerHTML = "";
-
-        let isOk = true; // Flag to track form validity
-
-        // Validate name and last name fields
-        const name = document.getElementById("first_name").value;
-        const lastName = document.getElementById("last_name").value;
-        const namePattern = /^[A-Za-z\s]+$/;
-        if (!namePattern.test(name)) {
-            document.getElementById("errname").innerHTML = "Invalid first name. Only letters and spaces allowed.";
-            isOk = false;
-        }
-        if (!namePattern.test(lastName)) {
-            document.getElementById("errname").innerHTML = "Invalid last name. Only letters and spaces allowed.";
-            isOk = false;
-        }
-
-        // Validate phone number field
-        const phoneNum = document.getElementById("phoneNum").value;
-        const phonePattern = /^[0-9]{10}$/;
-        if (!phonePattern.test(phoneNum)) {
-            document.getElementById("errphone").innerHTML = "Invalid phone number. Must be 10 digits.";
-            isOk = false;
-        }
-
-        // Validate email field
-        const email = document.getElementById("email").value;
-        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailPattern.test(email)) {
-            document.getElementById("erremail").innerHTML = "Invalid email address.";
-            isOk = false;
-        }
-
-        // Validate password fields
-        const password = document.getElementById("password").value;
-        const repeatPass = document.getElementById("repeat_pass").value;
-        if (password.length < 8) {
-            document.getElementById("errpassword").innerHTML = "Password must be at least 8 characters long.";
-            isOk = false;
-        } else if (password !== repeatPass) {
-            document.getElementById("errpassword").innerHTML = "Passwords do not match.";
-            isOk = false;
-        }
-
-        // Perform actions if all validations pass
-        if (isOk) {
-            // Display thank-you message
-            document.getElementById("list2").innerHTML = "<li>Thank you for joining us!</li>";
-
-            // Disable all text boxes
-            const textBoxes = document.getElementsByTagName("input");
-            for (let i = 0; i < textBoxes.length; i++) {
-                textBoxes[i].disabled = true;
-            }
-        }
-    }
-
-
-
-
-
-</script>
-	</html>
+</html>

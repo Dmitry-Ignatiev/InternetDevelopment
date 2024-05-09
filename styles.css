@@ -1,8 +1,11 @@
 /* Internal CSS for body background color */
+
+/* Styles the h1 elements with a red background color */
 h1 {
     background-color: red; /* Your favorite color */
 }
 
+/* Styles h2 elements with medium border-bottom width, centered text, Arial font, and medium font size */
 h2 {
     border-block-end-width: medium;
     text-align: center;
@@ -10,33 +13,39 @@ h2 {
     font-size: medium;
 }
 
+/* Sets the body background color to beige, centers text, and adds an orange border color */
 body {
     text-align: center;
     background-color: beige;
     border-color: orange;
 }
 
+/* Centers the text of ul elements and sets the border color to orangered */
 ul {
     text-align: center;
     border-color: orangered;
 }
 
+/* Centers text in li elements, adds margin-bottom space for separation, and sets the border to transparent */
 li {
     text-align: center;
     margin-bottom: 10px;
     border: 1px solid transparent;
 }
 
+/* Styles the intro class with an orange border, padding, and display as an inline-block */
 .intro {
     border: 2px solid orange;
     padding: 5px;
     display: inline-block;
 }
 
+/* Adds an orange border color when hovering over li elements */
 li:hover {
     border-color: orange;
 }
 
+/* Sets the color of li elements inside #list2 to red */
 #list2 li {
     color: red;
 }
